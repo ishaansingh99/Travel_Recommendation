@@ -52,7 +52,7 @@ fetch("travel_recommendation_api.json")
 
             data.countries.map((country) => {
                 country.cities.map((city) => {
-                    if (city.name.toLowerCase() === searchQuery) {
+                    if (city.name.toLowerCase().includes(searchQuery)) {
                         showResult(city.name, city.imageUrl, city.description);
                         notfound = false;
                     }
@@ -60,7 +60,7 @@ fetch("travel_recommendation_api.json")
             });
 
             data.temples.map((temple) => {
-                if (temple.name.toLowerCase() === searchQuery) {
+                if (temple.name.toLowerCase().includes(searchQuery)) {
                     showResult(temple.name, temple.imageUrl, temple.description);
                     notfound = false;
                 }
