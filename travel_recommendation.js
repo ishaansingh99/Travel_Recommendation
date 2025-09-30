@@ -34,10 +34,10 @@ const closeDropdown = () => {
 closeBtn.addEventListener("click", closeDropdown);
 
 const searchError = () => {
-    if (mydiv.style.display === "none" || mydiv.style.display === "") {
-        mydiv.style.display = "block";
+    if (mylist.style.display === "none" || mylist.style.display === "") {
+        mylist.style.display = "block";
     } else {
-        mydiv.style.display = "none";
+        mylist.style.display = "none";
     }
 
     result.innerHTML = `<p class="notfound">Sorry we can't find your search</p>`;
